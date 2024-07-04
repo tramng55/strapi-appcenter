@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "operation_systems",
+  "info": {
+    "singularName": "operation-system",
+    "pluralName": "operation-systems",
+    "displayName": "Operation_System",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "FileContentType": {
+      "type": "string"
+    },
+    "FileExtention": {
+      "type": "string"
+    }
+  }
+}

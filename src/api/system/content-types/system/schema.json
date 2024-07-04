@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "systems",
+  "info": {
+    "singularName": "system",
+    "pluralName": "systems",
+    "displayName": "System",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "apps": {
+      "type": "dynamiczone",
+      "components": [
+        "component.app"
+      ]
+    }
+  }
+}

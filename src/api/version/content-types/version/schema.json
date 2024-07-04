@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "versions",
+  "info": {
+    "singularName": "version",
+    "pluralName": "versions",
+    "displayName": "Version",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "versionName": {
+      "type": "string"
+    },
+    "versionCode": {
+      "type": "string"
+    },
+    "releaseNotes": {
+      "type": "string"
+    },
+    "pathFile": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "isShowPopup": {
+      "type": "boolean"
+    },
+    "isLates": {
+      "type": "boolean"
+    },
+    "isShowHeader": {
+      "type": "boolean"
+    },
+    "isForce": {
+      "type": "boolean"
+    },
+    "operation_systems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::operation-system.operation-system"
+    },
+    "apps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::app.app",
+      "inversedBy": "versions"
+    }
+  }
+}

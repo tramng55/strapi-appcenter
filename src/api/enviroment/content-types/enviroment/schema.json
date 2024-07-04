@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enviroments",
+  "info": {
+    "singularName": "enviroment",
+    "pluralName": "enviroments",
+    "displayName": "Enviroment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "display": {
+      "type": "integer"
+    }
+  }
+}

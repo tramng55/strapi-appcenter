@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_component_apps",
+  "info": {
+    "displayName": "App",
+    "description": "",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "apps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::app.app"
+    }
+  }
+}
