@@ -6,7 +6,17 @@
 
 // const { createCoreRouter } = require('@strapi/strapi').factories;
 
-// module.exports = createCoreRouter('api::app.app');
+// module.exports = createCoreRouter('api::app.app', {
+//     config: {
+//         findMany: {
+//             middlewares: ["api::app.app-populate"]
+            
+//         },
+//         findOne: {
+//             middlewares: ["api::app.app-populate"]
+//         }
+//     },
+// });
 
 
 'use strict';
@@ -18,33 +28,28 @@
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
 module.exports = createCoreRouter('api::app.app');
-
-
+   
 module.exports = {
    routes: [
         {
             method: 'GET',
-            path: '/app',
+            path: '/apps',
             handler: 'app.find',
             config: {
                "policies": [],
-              
-
             }
         },
         {
             method: 'GET',
-            path: '/app/:id',
+            path: '/apps/:id',
             handler: 'app.findOne',
             config: {
-               "policies": []
-              
-
+               "policies": [],
             }
         },
         {
             method: 'DELETE',
-            path: '/app/:id',
+            path: '/apps/:id',
             handler: 'app.delete',
             config: {
                "policies": []
@@ -52,7 +57,7 @@ module.exports = {
         },
         {
             method: 'PUT',
-            path: '/app/:id',
+            path: '/apps/:id',
             handler: 'app.update',
             config: {
                "policies": []
@@ -60,7 +65,7 @@ module.exports = {
         },
         {
             method: 'POST',
-            path: '/app',
+            path: '/apps',
             handler: 'app.create',
             config: {
                "policies": []

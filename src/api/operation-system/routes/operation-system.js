@@ -14,7 +14,7 @@ module.exports = {
    routes: [
         {
             method: 'GET',
-            path: '/operation-system',
+            path: '/operation-systems',
             handler: 'operation-system.find',
             config: {
                "policies": []
@@ -22,7 +22,7 @@ module.exports = {
         },
         {
             method: 'GET',
-            path: '/operation-system/:id',
+            path: '/operation-systems/:id',
             handler: 'operation-system.findOne',
             config: {
                "policies": []
@@ -30,7 +30,7 @@ module.exports = {
         },
         {
             method: 'DELETE',
-            path: '/operation-system/:id',
+            path: '/operation-systems/:id',
             handler: 'operation-system.delete',
             config: {
                "policies": []
@@ -38,7 +38,7 @@ module.exports = {
         },
         {
             method: 'PUT',
-            path: '/operation-system/:id',
+            path: '/operation-systems/:id',
             handler: 'operation-system.update',
             config: {
                "policies": []
@@ -46,7 +46,7 @@ module.exports = {
         },
         {
             method: 'POST',
-            path: '/operation-system',
+            path: '/operation-systems',
             handler: 'operation-system.create',
             config: {
                "policies": []

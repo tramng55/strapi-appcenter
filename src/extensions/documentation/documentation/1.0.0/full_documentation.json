@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-07-04T07:23:55.495Z"
+    "x-generation-date": "2024-07-10T10:09:38.916Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5816,7 +5816,7 @@
     }
   },
   "paths": {
-    "/app": {
+    "/apps": {
       "get": {
         "responses": {
           "200": {
@@ -5986,7 +5986,7 @@
             }
           }
         ],
-        "operationId": "get/app"
+        "operationId": "get/apps"
       },
       "post": {
         "responses": {
@@ -6055,7 +6055,7 @@
           "App"
         ],
         "parameters": [],
-        "operationId": "post/app",
+        "operationId": "post/apps",
         "requestBody": {
           "required": true,
           "content": {
@@ -6068,7 +6068,7 @@
         }
       }
     },
-    "/app/{id}": {
+    "/apps/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -6147,7 +6147,7 @@
             }
           }
         ],
-        "operationId": "get/app/{id}"
+        "operationId": "get/apps/{id}"
       },
       "delete": {
         "responses": {
@@ -6228,7 +6228,7 @@
             }
           }
         ],
-        "operationId": "delete/app/{id}"
+        "operationId": "delete/apps/{id}"
       },
       "put": {
         "responses": {
@@ -6308,7 +6308,7 @@
             }
           }
         ],
-        "operationId": "put/app/{id}",
+        "operationId": "put/apps/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -6321,7 +6321,7 @@
         }
       }
     },
-    "/enviroment": {
+    "/enviroments": {
       "get": {
         "responses": {
           "200": {
@@ -6491,7 +6491,7 @@
             }
           }
         ],
-        "operationId": "get/enviroment"
+        "operationId": "get/enviroments"
       },
       "post": {
         "responses": {
@@ -6560,7 +6560,7 @@
           "Enviroment"
         ],
         "parameters": [],
-        "operationId": "post/enviroment",
+        "operationId": "post/enviroments",
         "requestBody": {
           "required": true,
           "content": {
@@ -6573,7 +6573,7 @@
         }
       }
     },
-    "/enviroment/{id}": {
+    "/enviroments/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -6652,7 +6652,7 @@
             }
           }
         ],
-        "operationId": "get/enviroment/{id}"
+        "operationId": "get/enviroments/{id}"
       },
       "delete": {
         "responses": {
@@ -6733,7 +6733,7 @@
             }
           }
         ],
-        "operationId": "delete/enviroment/{id}"
+        "operationId": "delete/enviroments/{id}"
       },
       "put": {
         "responses": {
@@ -6813,7 +6813,7 @@
             }
           }
         ],
-        "operationId": "put/enviroment/{id}",
+        "operationId": "put/enviroments/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -6826,7 +6826,7 @@
         }
       }
     },
-    "/operation-system": {
+    "/operation-systems": {
       "get": {
         "responses": {
           "200": {
@@ -6996,7 +6996,7 @@
             }
           }
         ],
-        "operationId": "get/operation-system"
+        "operationId": "get/operation-systems"
       },
       "post": {
         "responses": {
@@ -7065,7 +7065,7 @@
           "Operation-system"
         ],
         "parameters": [],
-        "operationId": "post/operation-system",
+        "operationId": "post/operation-systems",
         "requestBody": {
           "required": true,
           "content": {
@@ -7078,7 +7078,7 @@
         }
       }
     },
-    "/operation-system/{id}": {
+    "/operation-systems/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -7157,7 +7157,7 @@
             }
           }
         ],
-        "operationId": "get/operation-system/{id}"
+        "operationId": "get/operation-systems/{id}"
       },
       "delete": {
         "responses": {
@@ -7238,7 +7238,7 @@
             }
           }
         ],
-        "operationId": "delete/operation-system/{id}"
+        "operationId": "delete/operation-systems/{id}"
       },
       "put": {
         "responses": {
@@ -7318,7 +7318,7 @@
             }
           }
         ],
-        "operationId": "put/operation-system/{id}",
+        "operationId": "put/operation-systems/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -7331,7 +7331,7 @@
         }
       }
     },
-    "/system": {
+    "/systems": {
       "get": {
         "responses": {
           "200": {
@@ -7501,7 +7501,7 @@
             }
           }
         ],
-        "operationId": "get/system"
+        "operationId": "get/systems"
       },
       "post": {
         "responses": {
@@ -7570,7 +7570,7 @@
           "System"
         ],
         "parameters": [],
-        "operationId": "post/system",
+        "operationId": "post/systems",
         "requestBody": {
           "required": true,
           "content": {
@@ -7583,7 +7583,7 @@
         }
       }
     },
-    "/system/{id}": {
+    "/systems/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -7662,7 +7662,7 @@
             }
           }
         ],
-        "operationId": "get/system/{id}"
+        "operationId": "get/systems/{id}"
       },
       "delete": {
         "responses": {
@@ -7743,7 +7743,7 @@
             }
           }
         ],
-        "operationId": "delete/system/{id}"
+        "operationId": "delete/systems/{id}"
       },
       "put": {
         "responses": {
@@ -7823,7 +7823,7 @@
             }
           }
         ],
-        "operationId": "put/system/{id}",
+        "operationId": "put/systems/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -7836,7 +7836,7 @@
         }
       }
     },
-    "/version": {
+    "/versions": {
       "get": {
         "responses": {
           "200": {
@@ -8006,7 +8006,7 @@
             }
           }
         ],
-        "operationId": "get/version"
+        "operationId": "get/versions"
       },
       "post": {
         "responses": {
@@ -8075,7 +8075,7 @@
           "Version"
         ],
         "parameters": [],
-        "operationId": "post/version",
+        "operationId": "post/versions",
         "requestBody": {
           "required": true,
           "content": {
@@ -8088,7 +8088,7 @@
         }
       }
     },
-    "/version/{id}": {
+    "/versions/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -8167,7 +8167,7 @@
             }
           }
         ],
-        "operationId": "get/version/{id}"
+        "operationId": "get/versions/{id}"
       },
       "delete": {
         "responses": {
@@ -8248,7 +8248,7 @@
             }
           }
         ],
-        "operationId": "delete/version/{id}"
+        "operationId": "delete/versions/{id}"
       },
       "put": {
         "responses": {
@@ -8328,7 +8328,7 @@
             }
           }
         ],
-        "operationId": "put/version/{id}",
+        "operationId": "put/versions/{id}",
         "requestBody": {
           "required": true,
           "content": {

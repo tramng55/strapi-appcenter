@@ -1,5 +1,5 @@
 {
-  "/enviroment": {
+  "/enviroments": {
     "get": {
       "responses": {
         "200": {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/enviroment"
+      "operationId": "get/enviroments"
     },
     "post": {
       "responses": {
@@ -238,7 +238,7 @@
         "Enviroment"
       ],
       "parameters": [],
-      "operationId": "post/enviroment",
+      "operationId": "post/enviroments",
       "requestBody": {
         "required": true,
         "content": {
@@ -251,7 +251,7 @@
       }
     }
   },
-  "/enviroment/{id}": {
+  "/enviroments/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -330,7 +330,7 @@
           }
         }
       ],
-      "operationId": "get/enviroment/{id}"
+      "operationId": "get/enviroments/{id}"
     },
     "delete": {
       "responses": {
@@ -411,7 +411,7 @@
           }
         }
       ],
-      "operationId": "delete/enviroment/{id}"
+      "operationId": "delete/enviroments/{id}"
     },
     "put": {
       "responses": {
@@ -491,7 +491,7 @@
           }
         }
       ],
-      "operationId": "put/enviroment/{id}",
+      "operationId": "put/enviroments/{id}",
       "requestBody": {
         "required": true,
         "content": {

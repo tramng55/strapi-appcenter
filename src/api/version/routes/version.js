@@ -14,7 +14,7 @@ module.exports = {
    routes: [
         {
             method: 'GET',
-            path: '/version',
+            path: '/versions',
             handler: 'version.find',
             config: {
                "policies": []
@@ -22,7 +22,7 @@ module.exports = {
         },
         {
             method: 'GET',
-            path: '/version/:id',
+            path: '/versions/:id',
             handler: 'version.findOne',
             config: {
                "policies": []
@@ -30,7 +30,7 @@ module.exports = {
         },
         {
             method: 'DELETE',
-            path: '/version/:id',
+            path: '/versions/:id',
             handler: 'version.delete',
             config: {
                "policies": []
@@ -38,7 +38,7 @@ module.exports = {
         },
         {
             method: 'PUT',
-            path: '/version/:id',
+            path: '/versions/:id',
             handler: 'version.update',
             config: {
                "policies": []
@@ -46,7 +46,7 @@ module.exports = {
         },
         {
             method: 'POST',
-            path: '/version',
+            path: '/versions',
             handler: 'version.create',
             config: {
                "policies": []

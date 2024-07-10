@@ -1,5 +1,5 @@
 {
-  "/operation-system": {
+  "/operation-systems": {
     "get": {
       "responses": {
         "200": {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/operation-system"
+      "operationId": "get/operation-systems"
     },
     "post": {
       "responses": {
@@ -238,7 +238,7 @@
         "Operation-system"
       ],
       "parameters": [],
-      "operationId": "post/operation-system",
+      "operationId": "post/operation-systems",
       "requestBody": {
         "required": true,
         "content": {
@@ -251,7 +251,7 @@
       }
     }
   },
-  "/operation-system/{id}": {
+  "/operation-systems/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -330,7 +330,7 @@
           }
         }
       ],
-      "operationId": "get/operation-system/{id}"
+      "operationId": "get/operation-systems/{id}"
     },
     "delete": {
       "responses": {
@@ -411,7 +411,7 @@
           }
         }
       ],
-      "operationId": "delete/operation-system/{id}"
+      "operationId": "delete/operation-systems/{id}"
     },
     "put": {
       "responses": {
@@ -491,7 +491,7 @@
           }
         }
       ],
-      "operationId": "put/operation-system/{id}",
+      "operationId": "put/operation-systems/{id}",
       "requestBody": {
         "required": true,
         "content": {

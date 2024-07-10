@@ -1,5 +1,5 @@
 {
-  "/app": {
+  "/apps": {
     "get": {
       "responses": {
         "200": {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/app"
+      "operationId": "get/apps"
     },
     "post": {
       "responses": {
@@ -238,7 +238,7 @@
         "App"
       ],
       "parameters": [],
-      "operationId": "post/app",
+      "operationId": "post/apps",
       "requestBody": {
         "required": true,
         "content": {
@@ -251,7 +251,7 @@
       }
     }
   },
-  "/app/{id}": {
+  "/apps/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -330,7 +330,7 @@
           }
         }
       ],
-      "operationId": "get/app/{id}"
+      "operationId": "get/apps/{id}"
     },
     "delete": {
       "responses": {
@@ -411,7 +411,7 @@
           }
         }
       ],
-      "operationId": "delete/app/{id}"
+      "operationId": "delete/apps/{id}"
     },
     "put": {
       "responses": {
@@ -491,7 +491,7 @@
           }
         }
       ],
-      "operationId": "put/app/{id}",
+      "operationId": "put/apps/{id}",
       "requestBody": {
         "required": true,
         "content": {

@@ -1,5 +1,5 @@
 {
-  "/version": {
+  "/versions": {
     "get": {
       "responses": {
         "200": {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/version"
+      "operationId": "get/versions"
     },
     "post": {
       "responses": {
@@ -238,7 +238,7 @@
         "Version"
       ],
       "parameters": [],
-      "operationId": "post/version",
+      "operationId": "post/versions",
       "requestBody": {
         "required": true,
         "content": {
@@ -251,7 +251,7 @@
       }
     }
   },
-  "/version/{id}": {
+  "/versions/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -330,7 +330,7 @@
           }
         }
       ],
-      "operationId": "get/version/{id}"
+      "operationId": "get/versions/{id}"
     },
     "delete": {
       "responses": {
@@ -411,7 +411,7 @@
           }
         }
       ],
-      "operationId": "delete/version/{id}"
+      "operationId": "delete/versions/{id}"
     },
     "put": {
       "responses": {
@@ -491,7 +491,7 @@
           }
         }
       ],
-      "operationId": "put/version/{id}",
+      "operationId": "put/versions/{id}",
       "requestBody": {
         "required": true,
         "content": {

@@ -1,26 +1,8 @@
 
-// 'use strict';
-
-// const { CustomFields } = require('@strapi/strapi');
-// const enviroment = require('../../enviroment/controllers/enviroment');
-// const system = require('../../system/controllers/system');
-
-// /**
-//  * app controller
-//  */
-// const { createCoreController } = require('@strapi/strapi').factories;
-
-// module.exports = createCoreController('api::app.app');
-
-
-
 'use strict';
 
-const { CustomFields } = require('@strapi/strapi');
-
-const system = require('../../system/controllers/system');
-const { sort, filter } = require('../../../../config/middlewares');
 const enviroment = require('../../enviroment/controllers/enviroment');
+
 
 /**
  * app controller
@@ -28,47 +10,78 @@ const enviroment = require('../../enviroment/controllers/enviroment');
 const { createCoreController } = require('@strapi/strapi').factories;
 
 module.exports = createCoreController('api::app.app', ({strapi}) => ({
-  async find(ctx) {
-    try {
-        const entity = await strapi.entityService.findMany("api::app.app", {
-            fields: ["id", "name", "description", "slug", "bundle", "display"],
+    // async find(ctx) {
+    //     const { environmentName, systemId } = ctx.query;
+    //     try {
+    //         const entity = await strapi.entityService.findPage("api::app.app",
+    //             {
+    //             fields: ["id", "name", "description", "slug", "bundle", "display"],
+    //             populate: {
+    //                 enviroments: {
+    //                     fields: ["id", "name", "code"],
+                        
+    //                 },
+    //                 versions: {
+    //                     fields: ["id", "versionName", "versionCode", "releaseNotes"],
+    //                     populate: {
+    //                         operation_systems: {
+    //                             fields: ["id", "name", "code"],
+    //                         }
+    //                     }
+    //                 },
+    //                 systems: {
+    //                     fields: ["id", "name", "code"],
+    //                 }
+    //             },
+                
+    //         });
+    //         ctx.send(entity);
+    //     } catch (error) {
+    //         ctx.send({ error: 'An error occurred while fetching the app data' }, 500);
+    //     }
+
+    // },
+
+    async find(ctx) {
+        const { env, systemId } = ctx.query;
+        try {
+          const filters = {};
+          if (env) {
+            filters.enviroments = { name: env};
+          }
+          if (systemId) {
+            filters.systems = { id: systemId };
+          }
+          const entity = await strapi.entityService.findMany("api::app.app", {
+            fields: ["id", "name", "description", "slug", "bundle"],
             populate: {
-                enviroments: {
-                    fields: ["id", "name", "code"],
-                    filters: {
-                      name: {
-                        $eq : "DEV"
-                      }
-                    }
-                },
-                versions: {
-                    fields: ["id", "versionName", "versionCode", "releaseNotes"],
-                    populate: {
-                        operation_systems: {
-                            fields: ["id", "name", "code"],
-                        }
-                    }
+              enviroments: {
+                fields: ["id", "name", "code"],
+                filters: filters.enviroments,
+              },
+              versions: {
+                fields: ["id", "versionName", "versionCode"],
+                populate: {
+                  operation_systems: {
+                    fields: ["id", "name", "code"]
+                  }
                 }
+              },
             },
-            filters: {
-                $and: [
-                    { enviroments: { name: { $eq: "DEV" } } },
-                    { systems: { name: { $eq: "Long Châu" } } }
-                ]
-            }
-        });
-        ctx.send(entity);
-    } catch (error) {
-        ctx.send({ error: 'An error occurred while fetching the app data' }, 500);
-    }
-},
+            filters
+          });
+          ctx.send(entity);
+        } catch (error) {
+          ctx.send({ error: 'An error occurred while fetching the app data' }, 500);
+        }
+    },
 
     async findOne(ctx) {
         try {
           const { id } = ctx.params;
           const entity = await strapi.entityService.findOne("api::app.app", 
             id, {
-            fields: ["id","name", "description", "slug", "bundle","display"],
+            fields: ["id", "name", "description", "slug", "bundle","display"],
             populate: {
                     versions: {
                         fields:["id", "versionName", "versionCode", "releaseNotes"],
@@ -116,10 +129,10 @@ module.exports = createCoreController('api::app.app', ({strapi}) => ({
         } catch (error) {
           ctx.send({ error: 'An error occurred while creating the app' }, 500);
         }
-      },
+    },
 
     
-      async customUpdate(ctx) {
+    async customUpdate(ctx) {
         try {
           const { id } = ctx.params;
           const { params} = ctx.Request;
@@ -148,7 +161,6 @@ module.exports = createCoreController('api::app.app', ({strapi}) => ({
           ctx.send({ error: 'An error occurred while updating the app' }, 500);
         }
     },
-
 
     async customDelete(ctx) {
         try {

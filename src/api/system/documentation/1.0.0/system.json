@@ -1,5 +1,5 @@
 {
-  "/system": {
+  "/systems": {
     "get": {
       "responses": {
         "200": {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/system"
+      "operationId": "get/systems"
     },
     "post": {
       "responses": {
@@ -238,7 +238,7 @@
         "System"
       ],
       "parameters": [],
-      "operationId": "post/system",
+      "operationId": "post/systems",
       "requestBody": {
         "required": true,
         "content": {
@@ -251,7 +251,7 @@
       }
     }
   },
-  "/system/{id}": {
+  "/systems/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -330,7 +330,7 @@
           }
         }
       ],
-      "operationId": "get/system/{id}"
+      "operationId": "get/systems/{id}"
     },
     "delete": {
       "responses": {
@@ -411,7 +411,7 @@
           }
         }
       ],
-      "operationId": "delete/system/{id}"
+      "operationId": "delete/systems/{id}"
     },
     "put": {
       "responses": {
@@ -491,7 +491,7 @@
           }
         }
       ],
-      "operationId": "put/system/{id}",
+      "operationId": "put/systems/{id}",
       "requestBody": {
         "required": true,
         "content": {

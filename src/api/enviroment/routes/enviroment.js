@@ -27,7 +27,7 @@ module.exports = {
    routes: [
         {
             method: 'GET',
-            path: '/enviroment',
+            path: '/enviroments',
             handler: 'enviroment.find',
             config: {
                "policies": []
@@ -35,7 +35,7 @@ module.exports = {
         },
         {
             method: 'GET',
-            path: '/enviroment/:id',
+            path: '/enviroments/:id',
             handler: 'enviroment.findOne',
             config: {
                "policies": []
@@ -43,7 +43,7 @@ module.exports = {
         },
         {
             method: 'DELETE',
-            path: '/enviroment/:id',
+            path: '/enviroments/:id',
             handler: 'enviroment.delete',
             config: {
                "policies": []
@@ -51,7 +51,7 @@ module.exports = {
         },
         {
             method: 'PUT',
-            path: '/enviroment/:id',
+            path: '/enviroments/:id',
             handler: 'enviroment.update',
             config: {
                "policies": []
@@ -59,7 +59,7 @@ module.exports = {
         },
         {
             method: 'POST',
-            path: '/enviroment',
+            path: '/enviroments',
             handler: 'enviroment.create',
             config: {
                "policies": []
