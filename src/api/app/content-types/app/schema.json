@@ -57,6 +57,10 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::enviroment.enviroment"
+    },
+    "guid": {
+      "type": "customField",
+      "customField": "plugin::field-uuid.uuid"
     }
   }
 }

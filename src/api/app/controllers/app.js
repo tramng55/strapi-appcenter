@@ -1,7 +1,4 @@
-
 'use strict';
-
-const enviroment = require('../../enviroment/controllers/enviroment');
 
 
 /**
@@ -10,178 +7,140 @@ const enviroment = require('../../enviroment/controllers/enviroment');
 const { createCoreController } = require('@strapi/strapi').factories;
 
 module.exports = createCoreController('api::app.app', ({strapi}) => ({
-    // async find(ctx) {
-    //     const { environmentName, systemId } = ctx.query;
-    //     try {
-    //         const entity = await strapi.entityService.findPage("api::app.app",
-    //             {
-    //             fields: ["id", "name", "description", "slug", "bundle", "display"],
-    //             populate: {
-    //                 enviroments: {
-    //                     fields: ["id", "name", "code"],
-                        
-    //                 },
-    //                 versions: {
-    //                     fields: ["id", "versionName", "versionCode", "releaseNotes"],
-    //                     populate: {
-    //                         operation_systems: {
-    //                             fields: ["id", "name", "code"],
-    //                         }
-    //                     }
-    //                 },
-    //                 systems: {
-    //                     fields: ["id", "name", "code"],
-    //                 }
-    //             },
-                
-    //         });
-    //         ctx.send(entity);
-    //     } catch (error) {
-    //         ctx.send({ error: 'An error occurred while fetching the app data' }, 500);
-    //     }
-
-    // },
-
-    async find(ctx) {
-        const { env, systemId } = ctx.query;
-        try {
-          const filters = {};
-          if (env) {
-            filters.enviroments = { name: env};
-          }
-          if (systemId) {
-            filters.systems = { id: systemId };
-          }
-          const entity = await strapi.entityService.findMany("api::app.app", {
-            fields: ["id", "name", "description", "slug", "bundle"],
+  async customFind(ctx) {
+    try {
+      const { env, systemId } = ctx.query;
+      const filters = {};
+      
+      if (env) {
+        filters.enviroments = { name: env };  
+      }
+      if (systemId) {
+        filters.systems = { guid: systemId };  
+      } 
+  
+      const entity = await strapi.db.query("api::app.app").findMany({
+        select: ["id", "guid", "name", "description", "slug", "bundle", "display"],
+        populate: {
+          environments: {
+            select: ["id", "guid", "name", "code"],
+            filters: filters.enviroments
+          },
+          versions: {
+            select: ["id", "guid", "versionName", "versionCode"],
             populate: {
-              enviroments: {
-                fields: ["id", "name", "code"],
-                filters: filters.enviroments,
-              },
-              versions: {
-                fields: ["id", "versionName", "versionCode"],
-                populate: {
-                  operation_systems: {
-                    fields: ["id", "name", "code"]
-                  }
-                }
-              },
+              operation_systems: {
+                select: ["id", "guid", "name", "code"],
+              }
             },
-            filters
-          });
-          ctx.send(entity);
-        } catch (error) {
-          ctx.send({ error: 'An error occurred while fetching the app data' }, 500);
-        }
-    },
+          }
+        },
+        where: filters
+      });
+  
+      ctx.send(entity);
+    } catch (error) {
+      strapi.log.error('Error fetching apps:', error);
+      ctx.send({ error: 'Internal server error' }, 500);
+    }
+  },
 
-    async findOne(ctx) {
-        try {
-          const { id } = ctx.params;
-          const entity = await strapi.entityService.findOne("api::app.app", 
-            id, {
-            fields: ["id", "name", "description", "slug", "bundle","display"],
+  async customFindOne(ctx) {
+    try {
+      const { id } = ctx.params;
+  
+      const entity = await strapi.db.query("api::app.app").findOne({
+        where: { guid: id },
+        select: ["id", "guid", "name", "description", "slug", "display"],
+        populate: {
+          enviroments: {
+            select: ["id", "guid", "name", "code"],
+          },
+          systems: {
+            select: ["id", "guid", "name", "code"],
+          },
+          versions: {
+            select: ["id", "guid", "versionName", "versionCode", "releaseNotes"],
             populate: {
-                    versions: {
-                        fields:["id", "versionName", "versionCode", "releaseNotes"],
-                        populate: {
-                            operation_systems: { 
-                                fields: [ "id", "name", "code", "description"],
-                            }
-                        }
-                    },
-                    enviroments: {
-                        fields: ["id", "name", "code", "description", "display"],
-                    },
-                    systems: {
-                        fields: ["id", "name", "description", "code"],
-                    },
-                },
-            })
-            
-          if (!entity) {
-            return ctx.send({ error: 'App not found' }, 404);
+              operation_systems: {
+                select: ["id", "guid", "name", "code"],
+              }
+            }
           }
-          ctx.send(entity);
-        } catch (error) {
-          ctx.send({ error: 'An error occurred while fetching the app' }, 500);
         }
-    },
+      });
+      if (!entity) {
+        return ctx.send({ error: 'App not found' }, 404);
+      }
+      ctx.send(entity);
+    } catch (error) {
+      strapi.log.error('Error fetching app:', error);
+      ctx.send({ error: 'Internal server error' }, 500);
+    }
+  },
+  
 
-
-    async customCreate(ctx) {
-        try {
-          const { params } = ctx.Request
-          const entity = await strapi.entityService.create("api::app.app", 
-            {
-            data: {
-              name: params.name,
-              description: params.description,
-              slug: params.slug,
-              display: params.display,
-              imageUrl: params.imageUrl,
-              environments: params.environments,
-              systems: params.systems
-            },
-            });
-          ctx.send(entity);
-        } catch (error) {
-          ctx.send({ error: 'An error occurred while creating the app' }, 500);
-        }
-    },
+  async customDelete(ctx) {
+    try {
+      const { id } = ctx.params;
+      const entity = await strapi.db.query("api::app.app").findOne({
+        where: { guid: id },
+      });
+      if (!entity) {
+        return ctx.send({ error: 'App not found' }, 404);
+      }
+      await strapi.db.query("api::app.app").delete({
+        where: { guid: id }
+      });
+  
+      ctx.send({ message: 'App deleted successfully' });
+    } catch (error) {
+      strapi.log.error('Error deleting app:', error);
+      ctx.send({ error: 'Internal server error' }, 500);
+    }
+  },
 
     
-    async customUpdate(ctx) {
-        try {
-          const { id } = ctx.params;
-          const { params} = ctx.Request;
-    
-          // Fetch the existing entity
-          const existingEntity = await strapi.entityService.findOne("api::app.app", id);
-          if (!existingEntity) {
-            return ctx.send({ error: 'App not found' }, 404);
+  async customUpdate(ctx) {
+    const { id } = ctx.params;
+      if (!ctx.Request.body || !ctx.Request.body.data) {
+        return ctx.send({ error: 'No data provided' }, 400);
+      }
+      const { data } = ctx.Request.body;
+
+    try {
+      const entity = await strapi.db.query("api::app.app").findOne({
+        where: { guid: id }
+      });
+      if (!entity) {
+        return ctx.send({ error: 'App not found' }, 404);
+      }
+    const updatedEntity = await strapi.db.query("api::app.app").update({
+      where: { guid: id },
+      select: ["id", "guid", "name", "description", "slug", "display"],
+        populate: {
+          enviroments: {
+            select:["id", "guid", "name", "code"],
+          },
+          systems: {
+            select:["id","guid",  "name", "code"],
+          },
+          versions: {
+            select: ["id","guid",  "versionName", "versionCode", "releaseNotes"],
+            populate: {
+              operation_systems: {
+                select: ["id", "guid", "name", "code"],
+              }
+            }
           }
-    
-          // Update the entity
-          const updatedEntity = await strapi.entityService.update("api::app.app", id, {
-            data: {
-              name: params.name,
-              description: params.description,
-              slug: params.slug,
-              imageUrl: params.imageUrl,
-              display: params.display,
-              environments: params.enviroments,
-              systems: params.systems
-            },
-          });
-    
-          ctx.send(updatedEntity);
-        } catch (error) {
-          ctx.send({ error: 'An error occurred while updating the app' }, 500);
-        }
-    },
-
-    async customDelete(ctx) {
-        try {
-          const { id } = ctx.params;
-    
-          // Fetch the existing entity
-          const existingEntity = await strapi.entityService.findOne("api::app.app", id);
-          if (!existingEntity) {
-            return ctx.send({ error: 'App not found' }, 404);
-          }
-    
-          // Delete the entity
-          await strapi.entityService.delete("api::app.app", id);
-    
-          ctx.send({ message: 'App deleted successfully' });
-        } catch (error) {
-          ctx.send({ error: 'An error occurred while deleting the app' }, 500);
-        }
-    },
-
-    
+        },
+      data: data
+    });
+    ctx.send(updatedEntity);
+    } catch (err) {
+      ctx.send({ error: 'An error occurred', details: err.message }, 500);
+    }
+  }
 }));
 
 

@@ -23,6 +23,10 @@
     },
     "display": {
       "type": "integer"
+    },
+    "guid": {
+      "type": "customField",
+      "customField": "plugin::field-uuid.uuid"
     }
   }
 }

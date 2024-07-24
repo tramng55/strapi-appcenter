@@ -822,6 +822,7 @@ export interface ApiAppApp extends Schema.CollectionType {
       'oneToMany',
       'api::enviroment.enviroment'
     >;
+    guid: Attribute.UID & Attribute.CustomField<'plugin::field-uuid.uuid'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -848,6 +849,7 @@ export interface ApiEnviromentEnviroment extends Schema.CollectionType {
     description: Attribute.String;
     code: Attribute.String;
     display: Attribute.Integer;
+    guid: Attribute.UID & Attribute.CustomField<'plugin::field-uuid.uuid'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -883,6 +885,7 @@ export interface ApiOperationSystemOperationSystem
     code: Attribute.String;
     FileContentType: Attribute.String;
     FileExtention: Attribute.String;
+    guid: Attribute.UID & Attribute.CustomField<'plugin::field-uuid.uuid'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -917,6 +920,7 @@ export interface ApiSystemSystem extends Schema.CollectionType {
     description: Attribute.String;
     code: Attribute.String;
     apps: Attribute.DynamicZone<['component.app']>;
+    guid: Attribute.UID & Attribute.CustomField<'plugin::field-uuid.uuid'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -966,6 +970,7 @@ export interface ApiVersionVersion extends Schema.CollectionType {
       'manyToMany',
       'api::app.app'
     >;
+    guid: Attribute.UID & Attribute.CustomField<'plugin::field-uuid.uuid'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

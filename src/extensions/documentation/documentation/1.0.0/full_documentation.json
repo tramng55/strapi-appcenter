@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-07-10T10:10:53.483Z"
+    "x-generation-date": "2024-07-24T03:28:28.904Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -171,6 +171,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "guid": {
+                "type": "string"
               }
             }
           }
@@ -1319,6 +1322,9 @@
                                                                             "FileExtention": {
                                                                               "type": "string"
                                                                             },
+                                                                            "guid": {
+                                                                              "type": "string"
+                                                                            },
                                                                             "createdAt": {
                                                                               "type": "string",
                                                                               "format": "date-time"
@@ -1391,6 +1397,9 @@
                                                                     }
                                                                   }
                                                                 }
+                                                              },
+                                                              "guid": {
+                                                                "type": "string"
                                                               },
                                                               "createdAt": {
                                                                 "type": "string",
@@ -1471,6 +1480,9 @@
                                                               "display": {
                                                                 "type": "integer"
                                                               },
+                                                              "guid": {
+                                                                "type": "string"
+                                                              },
                                                               "createdAt": {
                                                                 "type": "string",
                                                                 "format": "date-time"
@@ -1519,6 +1531,9 @@
                                                       }
                                                     }
                                                   }
+                                                },
+                                                "guid": {
+                                                  "type": "string"
                                                 },
                                                 "createdAt": {
                                                   "type": "string",
@@ -1577,6 +1592,9 @@
                               }
                             ]
                           }
+                        },
+                        "guid": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",
@@ -1671,6 +1689,9 @@
               }
             }
           },
+          "guid": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -1761,6 +1782,9 @@
               },
               "display": {
                 "type": "integer"
+              },
+              "guid": {
+                "type": "string"
               }
             }
           }
@@ -1826,6 +1850,9 @@
           },
           "display": {
             "type": "integer"
+          },
+          "guid": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -2168,6 +2195,9 @@
               },
               "FileExtention": {
                 "type": "string"
+              },
+              "guid": {
+                "type": "string"
               }
             }
           }
@@ -2235,6 +2265,9 @@
             "type": "string"
           },
           "FileExtention": {
+            "type": "string"
+          },
+          "guid": {
             "type": "string"
           },
           "createdAt": {
@@ -2586,6 +2619,9 @@
                     }
                   ]
                 }
+              },
+              "guid": {
+                "type": "string"
               }
             }
           }
@@ -2658,6 +2694,9 @@
                 }
               ]
             }
+          },
+          "guid": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -3752,6 +3791,9 @@
                                           ]
                                         }
                                       },
+                                      "guid": {
+                                        "type": "string"
+                                      },
                                       "createdAt": {
                                         "type": "string",
                                         "format": "date-time"
@@ -3875,6 +3917,9 @@
                                                     "FileExtention": {
                                                       "type": "string"
                                                     },
+                                                    "guid": {
+                                                      "type": "string"
+                                                    },
                                                     "createdAt": {
                                                       "type": "string",
                                                       "format": "date-time"
@@ -3947,6 +3992,9 @@
                                             }
                                           }
                                         }
+                                      },
+                                      "guid": {
+                                        "type": "string"
                                       },
                                       "createdAt": {
                                         "type": "string",
@@ -4027,6 +4075,9 @@
                                       "display": {
                                         "type": "integer"
                                       },
+                                      "guid": {
+                                        "type": "string"
+                                      },
                                       "createdAt": {
                                         "type": "string",
                                         "format": "date-time"
@@ -4075,6 +4126,9 @@
                               }
                             }
                           }
+                        },
+                        "guid": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",
@@ -4194,6 +4248,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "guid": {
+                "type": "string"
               }
             }
           }
@@ -4302,6 +4359,9 @@
                           "type": "string"
                         },
                         "FileExtention": {
+                          "type": "string"
+                        },
+                        "guid": {
                           "type": "string"
                         },
                         "createdAt": {
@@ -5223,6 +5283,9 @@
                                           ]
                                         }
                                       },
+                                      "guid": {
+                                        "type": "string"
+                                      },
                                       "createdAt": {
                                         "type": "string",
                                         "format": "date-time"
@@ -5357,6 +5420,9 @@
                                           }
                                         }
                                       },
+                                      "guid": {
+                                        "type": "string"
+                                      },
                                       "createdAt": {
                                         "type": "string",
                                         "format": "date-time"
@@ -5436,6 +5502,9 @@
                                       "display": {
                                         "type": "integer"
                                       },
+                                      "guid": {
+                                        "type": "string"
+                                      },
                                       "createdAt": {
                                         "type": "string",
                                         "format": "date-time"
@@ -5484,6 +5553,9 @@
                               }
                             }
                           }
+                        },
+                        "guid": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",
@@ -5537,6 +5609,9 @@
                 }
               }
             }
+          },
+          "guid": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -6149,87 +6224,6 @@
         ],
         "operationId": "get/apps/{id}"
       },
-      "delete": {
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "App"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "number"
-            }
-          }
-        ],
-        "operationId": "delete/apps/{id}"
-      },
       "put": {
         "responses": {
           "200": {
@@ -6319,6 +6313,87 @@
             }
           }
         }
+      },
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "App"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "operationId": "delete/apps/{id}"
       }
     },
     "/enviroments": {
@@ -6654,87 +6729,6 @@
         ],
         "operationId": "get/enviroments/{id}"
       },
-      "delete": {
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "Enviroment"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "number"
-            }
-          }
-        ],
-        "operationId": "delete/enviroments/{id}"
-      },
       "put": {
         "responses": {
           "200": {
@@ -6824,6 +6818,87 @@
             }
           }
         }
+      },
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Enviroment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "operationId": "delete/enviroments/{id}"
       }
     },
     "/operation-systems": {
@@ -7159,87 +7234,6 @@
         ],
         "operationId": "get/operation-systems/{id}"
       },
-      "delete": {
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "Operation-system"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "number"
-            }
-          }
-        ],
-        "operationId": "delete/operation-systems/{id}"
-      },
       "put": {
         "responses": {
           "200": {
@@ -7329,6 +7323,87 @@
             }
           }
         }
+      },
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Operation-system"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "operationId": "delete/operation-systems/{id}"
       }
     },
     "/systems": {

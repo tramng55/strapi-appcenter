@@ -26,6 +26,10 @@
       "components": [
         "component.app"
       ]
+    },
+    "guid": {
+      "type": "customField",
+      "customField": "plugin::field-uuid.uuid"
     }
   }
 }

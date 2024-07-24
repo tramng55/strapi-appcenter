@@ -49,6 +49,10 @@
       "relation": "manyToMany",
       "target": "api::app.app",
       "inversedBy": "versions"
+    },
+    "guid": {
+      "type": "customField",
+      "customField": "plugin::field-uuid.uuid"
     }
   }
 }
